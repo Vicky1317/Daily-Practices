@@ -99,3 +99,16 @@ result.textContent=(event.target.textContent)
 }
 </script>
 TASK-6
+// While we click the button the element will be Erased..
+<h1 onclick="removeitem(event)">One</h1>
+<h1 onclick="removeitem(event)">Two</h1>
+<h1 onclick="removeitem(event)">Three</h1>
+<h1 onclick="removeitem(event)">Four</h1>
+<h1 onclick="removeitem(event)">Five</h1>
+<h1 onclick="removeitem(event)">Six</h1>
+<script>
+    function removeitem(event)
+    {
+event.target.remove()
+    }
+</script>
