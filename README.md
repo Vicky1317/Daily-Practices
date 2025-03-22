@@ -112,3 +112,64 @@ TASK-6
 event.target.remove()
     }
 </script>
+TASK-7
+// popup menu
+<style>
+    .overlay {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0.8;
+        z-index: 1;
+        display: none;
+    }
+
+    .popupbox {
+        background-color: white;
+        color: black;
+        width: 40%;
+        position: absolute;
+        padding: 20px;
+        left: 30%;
+        z-index: 3;
+        border-radius: 10px;
+        display: none;
+
+    }
+</style>
+ <button onclick="show()">Show</button>
+<div class="overlay"></div>
+<div class="popupbox">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde omnis aut praesentium quo ullam id similique
+        laboriosam nobis consequatur hic, fuga aliquam molestiae voluptatem veritatis magnam assumenda, aspernatur
+        corporis quasi.</p>
+    <button onclick="none()">Close</button>
+</div>
+<script>
+    var overlay = document.querySelector(".overlay")
+    var popupbox = document.querySelector(".popupbox")
+    function show() {
+        overlay.style.display = "block"
+        popupbox.style.display = "block"
+    }
+    function none() {
+        overlay.style.display = "none"
+        popupbox.style.display = "none"
+    }
+</script> 
+//Without calling function on button simply use addEvent.Listener to function the element
+<button id="btn">Show</button>
+<script>
+    var button = document.getElementById("btn")
+    button.addEventListener("click", function () {
+        alert("Hello")
+    })
+    button.addEventListener("mouseover", function () {
+        alert("MouseOver")
+    })
+</script>
+
+
